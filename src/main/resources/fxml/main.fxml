@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MainController" fx:id="rootPane">
+    <top>
+        <VBox spacing="10" style="-fx-background-color: #f8f9fa;">
+
+            <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-padding: 10 20 15 20;">
+                <Button text="Главная" onAction="#openDashboard" prefWidth="120"/>
+                <Button text="Бронирования" onAction="#openReservations" prefWidth="120"/>
+                <Button text="Столики" onAction="#openTables" prefWidth="120"/>
+                <Button text="Зоны" onAction="#openZones" prefWidth="120"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <VBox spacing="2" alignment="CENTER_RIGHT">
+                    <Label fx:id="globalStatsLabel" text="Загрузка: 0%"
+                           style="-fx-font-size: 12px; -fx-text-fill: #27ae60; -fx-font-weight: bold;"/>
+                    <Label text="Сегодня" style="-fx-font-size: 10px; -fx-text-fill: #666;"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </top>
+</BorderPane>
